@@ -1,7 +1,7 @@
 // Function to fetch tasks from the API and display them
 function fetchTasks() {
   $.ajax({
-    url: "http://localhost:3000/messages", // Replace with your API URL
+    url: "http://localhost:3000/messages", // API URL
     method: "GET",
     success: function(data) {
       let taskList = "<ul>";
@@ -17,7 +17,7 @@ function fetchTasks() {
 // Function to add a new task
 function addTask(taskContent) {
   $.ajax({
-    url: "http://localhost:3000/messages", // Replace with your API URL
+    url: "http://localhost:3000/messages", // API URL
     method: "POST",
     data: { content: taskContent },
     success: function(data) {
@@ -31,7 +31,7 @@ function editTask(id) {
   const newContent = prompt("Edit your task:");
   if (newContent !== null) {
     $.ajax({
-      url: `http://localhost:3000/messages/${id}`, // Replace with your API URL and task ID
+      url: `http://localhost:3000/messages/${id}`, // API URL and task ID
       method: "PUT",
       data: { content: newContent },
       success: function(data) {
@@ -44,7 +44,7 @@ function editTask(id) {
 // Function to delete a task
 function deleteTask(id) {
   $.ajax({
-    url: `http://localhost:3000/messages/${id}`, // Replace with your API URL and task ID
+    url: `http://localhost:3000/messages/${id}`, // API URL and task ID
     method: "DELETE",
     success: function(data) {
       fetchTasks(); // Refresh the list after deleting
