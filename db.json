@@ -1,16 +1,3 @@
 {
-  "messages": [
-    {
-      "content": "Why has it been so hot lately? ",
-      "id": 1
-    },
-    {
-      "content": "Why has it been so hot lately? ",
-      "id": 2
-    },
-    {
-      "content": "Why has it been so hot lately? ",
-      "id": 3
-    }
-  ]
+  "messages": []
 }
